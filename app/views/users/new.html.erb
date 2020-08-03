@@ -1,18 +1,9 @@
-<%= form_for(@article) do |f| %>
-    <ul>
-    <% @article.errors.full_messages.each do |error| %>
-      <li><%= error %></li>
-    <% end %>
-    </ul>
-    <p>
-      <%= f.label :title %><br />
-      <%= f.text_field :title %>
-    </p>
-    <p>
-      <%= f.label :body %><br />
-      <%= f.text_area :body %>
-    </p>
-    <p>
-      <%= f.submit %>
-    </p>
-  <% end %>
+<form action="/action" method="get">
+  <label for="uname">Username:</label>
+  <input type="text" id="uname" name="uname"><br>
+  <label for="email">Email:</label>
+  <input type="text" id="email" name="email"><br>
+  <label for="pword">Password:</label>
+  <input type="password" id="password" name="password"><br>
+  <input type="submit" value="Submit">
+</form>
