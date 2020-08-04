@@ -1,13 +1,26 @@
 
-<%= form_for :user, :url => {:action => "create"}  do |f|  %>
-    <%= f.label :username %><br />
-    <%= f.text_field :username %>
+<!-- <%= form_for :user, :url => {:action => "create"}  do |f|  %>
+     <%= f.label :username %><br />
+     <%= f.text_field :username %>
 
     <%= f.label :email %><br />
-    <%= f.text_field :email %>
+     <%= f.text_field :email %>
   
-    <%= f.label :password %><br />
-    <%= f.password_field :password %>
+     <%= f.label :password %><br />
+     <%= f.password_field :password %>
 
-    <%= f.submit %>
+     <%= f.submit %>
+ <% end %> -->
+ 
+<%= form_tag users_path do %>
+       <%= label_tag 'user_username', 'username' %>
+       <%= text_field_tag :'user[username]'%><br>
+
+       <%= label_tag 'user_email', 'email' %>
+       <%= text_field_tag :'user[email]'%><br>
+       
+       <%= label_tag 'user_password', 'password' %>
+       <%= password_field_tag :'user[password]'%><br>
+       <%= submit_tag %>
 <% end %>
+ 
