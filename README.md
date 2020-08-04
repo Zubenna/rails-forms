@@ -1,24 +1,57 @@
-# README
+# Building With Forms
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+  This project is to practice how to build an application to interact with a db using forms
 
-Things you may want to cover:
+## Features 
 
-* Ruby version
+You can create and edit Users
 
-* System dependencies
+## How to Test the Project
 
-* Configuration
+Get a local copy of the file  clone with HTTPS 
 
-* Database creation
+```
+https://github.com/Zubenna/rails-forms  
+```
 
-* Database initialization
+Migrate the database with the following command
+```
+bin/rake db:migrate
+```
 
-* How to run the test suite
+Run the server 
 
-* Services (job queues, cache servers, search engines, etc.)
+Go to the route users/new to create a new users
 
-* Deployment instructions
+Go to the route users/:id/edit to edit an existing user
 
-* ...
+## Built With
+- Ruby 
+- Rails
+
+## Authors
+
+ **Adrian Flores Pizarro**
+- Github: [@AdfPizarro](https://github.com/AdfPizarro)
+- Twitter: [@AdfPizarro](https://twitter.com/adfpizarro)
+- Linkedin: [adrian-flores-pizarro-73b62316a](https://www.linkedin.com/in/adrian-flores-pizarro-73b62316a/)
+
+ **Nnamdi Emelu**
+- Github: [@githubhandle](https://github.com/zubenna)
+- Twitter: [@twitterhandle](https://twitter.com/zubenna)
+- Linkedin: [linkedin](https://linkedin.com/in/nnamdi-emelu-08b14340/)
+
+##  Contributing
+
+Contributions, issues and feature requests are welcome!
+
+Feel free to check the [issues page](https://github.com/AdfPizarro/micro-reddit/issues).
+
+## Show your support
+
+Give a  if you like this project!
+
+## Acknowledgments
+
+- Project originally taken from The Odin Project
+- Project inspired by Microverse Program
