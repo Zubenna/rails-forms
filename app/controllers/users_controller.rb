@@ -8,13 +8,12 @@ class UsersController < ApplicationController
     		render :new
   	end
     end
-
+    def new
+        @user = User.new(email: "example@example.com")
+    end
    private
 
     def user_params
       params.require(:user).permit(:username,:email,:password)
-    end
-    def new
-	@user = User.new
     end
 end
