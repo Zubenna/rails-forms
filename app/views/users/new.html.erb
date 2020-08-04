@@ -25,16 +25,47 @@
        <%= submit_tag %>
 <% end %>
 -->
+<% if @user.errors.any? %>
+  <div id="error_explanation">
+    <h2>
+      <%= pluralize(@user.errors.count, "error") %>
+      prohibited this post from being saved:
+    </h2>
+
+    <ul>
+    <% @user.errors.full_messages.each do |msg| %>
+      <li><%= msg %></li>
+    <% end %>
+    </ul>
+  </div>
+<% end %>
 
 <%= form_for(@user) do |f| %>
+   <div>
      <%= f.label :username, 'Introduce your username' %><br />
-     <%= f.text_field :username, placeholder: "Your username" %>
-
+     <% if @user.errors[:username] %>
+	<%= f.text_field :username, placeholder: "Your username", :class=> "error" %>
+     <% else %>
+ 	<%= f.text_field :username, placeholder: "Your username" %>
+     <% end %>
+   </div>
+   <div>
     <%= f.label :email, 'Introduce your email' %><br />
-     <%= f.text_field :email , placeholder: "Your email" %>
-
+     <% if @user.errors[:username] %>
+       <%= f.text_field :email , placeholder: "Your email", :class=> "error" %>
+     <% else %>
+       <%= f.text_field :email , placeholder: "Your email" %>
+     <% end %>
+   </div>
+   <div>
      <%= f.label :password, 'Introduce your password' %><br />
+     <% if @user.errors[:username] %>
+      <%= f.password_field :password  , placeholder: "Your password", :class=> "error" %>
+     <% else %>
      <%= f.password_field :password  , placeholder: "Your password"%>
+     <% end %>
+  </div>
 
      <%= f.submit %>
 <% end %>
+
