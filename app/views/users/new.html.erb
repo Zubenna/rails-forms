@@ -1,9 +1,13 @@
-<form action="/action" method="get">
-  <label for="uname">Username:</label>
-  <input type="text" id="uname" name="uname"><br>
-  <label for="email">Email:</label>
-  <input type="text" id="email" name="email"><br>
-  <label for="pword">Password:</label>
-  <input type="password" id="password" name="password"><br>
-  <input type="submit" value="Submit">
-</form>
+
+<%= form_for :user, :url => {:action => "create"}  do |f|  %>
+    <%= f.label :username %><br />
+    <%= f.text_field :username %>
+
+    <%= f.label :email %><br />
+    <%= f.text_field :email %>
+  
+    <%= f.label :password %><br />
+    <%= f.password_field :password %>
+
+    <%= f.submit %>
+<% end %>
