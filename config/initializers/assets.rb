@@ -1,5 +1,3 @@
-# frozen_string_literal: true
-
 Rails.application.config.assets.version = '1.0'
 
 # Add additional assets to the asset load path.
