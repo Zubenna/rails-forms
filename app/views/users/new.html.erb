@@ -1,4 +1,14 @@
-
+<!-- <form action="/users" method="post">
+  <label for="uname">Username:</label>
+  <input type="text" id="username" name="user[username]"><br>
+  <label for="email">Email:</label>
+  <input type="text" id="email" name="user[email]"><br>
+  <label for="pword">Password:</label>
+  <input type="password" id="password" name="user[password]"><br>
+  <input type="submit" value="Submit">
+  <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
+</form>
+-->
 <!-- <%= form_for :user, :url => {:action => "create"}  do |f|  %>
      <%= f.label :username %><br />
      <%= f.text_field :username %>
@@ -43,27 +53,15 @@
 <%= form_for(@user) do |f| %>
    <div>
      <%= f.label :username, 'Introduce your username' %><br />
-     <% if @user.errors[:username] %>
-	<%= f.text_field :username, placeholder: "Your username", :class=> "error" %>
-     <% else %>
  	<%= f.text_field :username, placeholder: "Your username" %>
-     <% end %>
    </div>
    <div>
     <%= f.label :email, 'Introduce your email' %><br />
-     <% if @user.errors[:username] %>
-       <%= f.text_field :email , placeholder: "Your email", :class=> "error" %>
-     <% else %>
        <%= f.text_field :email , placeholder: "Your email" %>
-     <% end %>
    </div>
    <div>
      <%= f.label :password, 'Introduce your password' %><br />
-     <% if @user.errors[:username] %>
-      <%= f.password_field :password  , placeholder: "Your password", :class=> "error" %>
-     <% else %>
      <%= f.password_field :password  , placeholder: "Your password"%>
-     <% end %>
   </div>
 
      <%= f.submit %>
